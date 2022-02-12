@@ -1,0 +1,84 @@
+* {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  background: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #fafafa;
+  position: sticky;
+  top: 0;
+}
+
+.navigation-bar {
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: #d2d2d2 solid;
+  padding: 30px;
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  margin-left: 2em;
+  font-size: 1rem;
+}
+
+.about {
+  background: url(/list-of-painters/vincent-van-gogh.jpg) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.body {
+  background-color: #fafafa;
+  height: 80%;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
+.body-info h2 {
+  text-align: center;
+}
+
+.body-title h2::before,
+.body-title h2::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.body-title h2::before {
+  background: #fafafa;
+  animation: typewriter 4s steps(16) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+.body-title h2::after {
+  background: black;
+  width: 0.125em;
+  animation: typewriter 4s steps(16) forwards;
+}
+
+.body-info p {
+  margin-left: 3.5rem;
+}

@@ -1,0 +1,129 @@
+* {
+  font-family: "Roboto Mono", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #fafafa;
+  position: sticky;
+  top: 0;
+}
+
+.navigation-bar {
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: #d2d2d2 solid;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+
+.navigation-bar a {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  margin-left: 2em;
+  font-size: 1rem;
+}
+
+.painters-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  width: 100%;
+  gap: 3rem;
+}
+
+.painters-item {
+  background: #fafafa;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s ease-out;
+  margin-top: 3rem;
+  width: 265px;
+  height: 345px;
+  padding: 24px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.painters-item:hover {
+  transform: translateY(15px);
+}
+
+.painters-item:hover:before {
+  opacity: 1;
+}
+
+.painters-item:hover .painters-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.painters-item:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background: linear-gradient(to top, #000, transparent);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.painters-item img {
+  object-fit: cover;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.painters-item .painters-info {
+  position: relative;
+  color: #fff;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+.painters-info h2 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.bottom-part {
+  display: block;
+  height: 100px;
+}
+
+@media (max-width: 500px) {
+  .painters-area {
+    overflow-y: hidden;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .painters-item img {
+    flex-basis: 50%;
+  }
+}
